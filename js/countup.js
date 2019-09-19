@@ -2,7 +2,7 @@
 $(document).ready(function(){
 countNum = [];
 
-for( var i = 0; i < 50; i++ ){
+for( var i = 0; i < 100; i++ ){
   countNum.push(i);
 }
 
@@ -14,7 +14,7 @@ $(window).on('load' , function(){
 setInterval (function(){
   $(".count").text( countNum[n] );
   n++;
-  if( n > 50 ){
+  if( n > 100 ){
     clearInterval();
   }
 },10);
