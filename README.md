@@ -1,4 +1,4 @@
 # countUp
 
 
-number countup 1 for 99
+count up for 1 to 99
