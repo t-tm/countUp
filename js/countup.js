@@ -1,21 +1,12 @@
 // JavaScript Document
-$(document).ready(function(){
-countNum = [];
-
-for( var i = 0; i < 100; i++ ){
-  countNum.push(i);
-}
-
-console.log(countNum);
-});
-
 $(window).on('load' , function(){
-  n = 0;
-setInterval (function(){
-  $(".count").text( countNum[n] );
-  n++;
-  if( n > 100 ){
-    clearInterval();
-  }
-},10);
+  var countupNum = 0;
+  //【※注】変数にsetIntervalを入れて、その変数名に対してclearIntervalを設定しないと止まらない。
+  var numTimer = setInterval (function(){
+    $(".count").text( countupNum );
+    countupNum++;
+    if( countupNum > 99 ){
+      clearInterval(numTimer);
+    }
+  },10);
 });
